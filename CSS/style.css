@@ -10,6 +10,7 @@
 nav {
     width: 73%;
     padding: 1%;
+    text-align: right;
 }
 ul {
     width: 50%;
@@ -20,7 +21,9 @@ ul {
 li {
     padding-left: 35px;
     padding-right: 35px;
-    text-align: center;
+    text-align: right;
+    color: blue;
+    font-weight: bolder;
 }
 .herolmg {
     height: 600px;
@@ -31,9 +34,62 @@ li {
     margin: 0 auto;
 }
 footer {
-background-color: #373738;
+background-color: lightgray;
 }
 footer ul {
     display: inline-block;
     vertical-align: top;
+}
+.flexContainer {
+    display:flex;
+    flex-direction:row;
+}
+.flexcontainer div {
+    width: 33%;
+}
+.workGrid {
+    margin: 0px 5%;
+    display: grid;
+    grid-template-rows: 300px 300px 300px;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-areas:
+    "eventKey"
+    "eventKeyinfo"
+    "DOE"
+    "DOEinfo";
+}
+#eventKey {
+    grid-area: 1/1/2/2;
+    
+}
+#eventKeyinfo {
+    grid-area: 1/2/1/2;
+}
+#DOE {
+    grid-area: 2/1/2/1;
+}
+#DOEinfo {
+    grid-area: 2/2/2/2;
+}
+.myWork h3 {
+    text-align: center;
+    color: blue;
+    font-weight: lighter;
+}
+@media only screen and (width: 600px) {
+.flexContainer {
+    flex-direction: column;
+    width: 100%;
+}
+.workGrid {
+    margin: 0px 5%;
+    display: grid;
+    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "eventKey"
+    "eventKeyinfo"
+    "DOE"
+    "DOEinfo";
+}
 }
